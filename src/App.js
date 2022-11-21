@@ -1,8 +1,7 @@
 import './App.css';
-import Home from './pages/home';
 import { useEffect, useState } from 'react';
 import { db } from './firebase'
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, getDocs, addDoc, doc, deleteDoc } from "firebase/firestore";
 
 function App() {
   const [title, set_title] = useState("");
@@ -15,7 +14,8 @@ function App() {
   const entretenimentoCollectionRef = collection(db, "faq.entretenimento");
 
   const criarEntretenimento = async () => {
-    await addDoc(entretenimentoCollectionRef, {title: title, subtitle: subtitle, b_title: b_title, b_url: b_url, i_url: i_url})
+    await addDoc(entretenimentoCollectionRef, { title: title, subtitle: subtitle, b_title: b_title, b_url: b_url, i_url: i_url })
+    window.location.reload(false);
   }
 
   useEffect(() => {
@@ -26,23 +26,30 @@ function App() {
     getEntretenimento();
   }, [])
 
+  const removerEntretenimento = async (id) => {
+    const entrDoc = doc(db, "faq.entretenimento", id);
+    await deleteDoc(entrDoc);
+    window.location.reload(false);
+  }
+
   return (
     <div className="App">
+      <br />
       <input placeholder='Titulo: ' onChange={(event => {
         set_title(event.target.value);
-      })} />
+      })} /><br />
       <input placeholder='Subtitulo: ' onChange={(event => {
         set_subtitle(event.target.value);
-      })} />
+      })} /><br />
       <input placeholder='Titulo do botão: ' onChange={(event => {
         set_b_title(event.target.value);
-      })} />
+      })} /><br />
       <input placeholder='Url do botão: ' onChange={(event => {
         set_b_url(event.target.value);
-      })} />
+      })} /><br />
       <input placeholder='Url da imagem: ' onChange={(event => {
         set_i_url(event.target.value);
-      })} />
+      })} /><br />
       <button onClick={criarEntretenimento}>Adicionar notícia</button>
       {entretenimento.map((entr) => {
         return (
@@ -53,6 +60,7 @@ function App() {
               <li>b_title: {entr.b_title}</li>
               <li>b_url: {entr.b_url}</li>
               <li>i_url: {entr.i_url}</li>
+              <button onClick={() => { removerEntretenimento(entr.id) }}>Remover notícia</button>
             </ul>
           </div>
         );
