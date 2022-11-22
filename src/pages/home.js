@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () =>{
+const Home = () => {
+
+  function sair() {
+    localStorage.clear()
+    alert("Até mais!")
+    window.location.reload(false);
+  }
+
   return (
     <div>
       <h1>Casper - Seu bot de notícias</h1>
+      <button onClick={sair}>Sair</button>
       <nav>
         <ul>
           <li>

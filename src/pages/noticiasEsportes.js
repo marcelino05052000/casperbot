@@ -16,7 +16,7 @@ const NoticiasEsportes = () => {
         <>
             <header>
                 <h1>Notícias sobre Esportes</h1>
-                <Link to="/">retornar a página inicial</Link>
+                <Link to="/home">retornar a página inicial</Link>
             </header>
 
             <Esportes id={idEsportes} setIdEsportes={setIdEsportes} />

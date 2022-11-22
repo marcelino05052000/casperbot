@@ -16,7 +16,7 @@ const NoticiasPolitica = () => {
         <>
             <header>
                 <h1>Notícias sobre Política</h1>
-                <Link to="/">retornar a página inicial</Link>
+                <Link to="/home">retornar a página inicial</Link>
             </header>
 
             <Politica id={idPolitica} setIdPolitica={setIdPolitica} />
