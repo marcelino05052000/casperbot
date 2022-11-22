@@ -1,0 +1,28 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Esportes from '../components/esportes';
+import ListaEsportes from '../components/listaEsportes';
+
+const NoticiasEsportes = () => {
+    //ID Esportes
+    const [idEsportes, setIdEsportes] = useState("");
+
+    const getIdEsportesHandler = (id) => {
+        console.log("ID: ", id);
+        setIdEsportes(id);
+    };
+
+    return (
+        <>
+            <header>
+                <h1>Notícias sobre Esportes</h1>
+                <Link to="/">retornar a página inicial</Link>
+            </header>
+
+            <Esportes id={idEsportes} setIdEsportes={setIdEsportes} />
+            <ListaEsportes getIdEsportes={getIdEsportesHandler} />
+        </>
+    );
+}
+
+export default NoticiasEsportes;
