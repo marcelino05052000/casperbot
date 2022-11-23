@@ -8,7 +8,6 @@ const NoticiasPolitica = () => {
     const [idPolitica, setIdPolitica] = useState("");
 
     const getIdPoliticaHandler = (id) => {
-        console.log("ID: ", id);
         setIdPolitica(id);
     };
 

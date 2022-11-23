@@ -8,7 +8,6 @@ const NoticiasFamosos = () => {
     const [idFamosos, setIdFamosos] = useState("");
 
     const getIdFamososHandler = (id) => {
-        console.log("ID: ", id);
         setIdFamosos(id);
     };
 

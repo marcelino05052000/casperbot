@@ -10,37 +10,40 @@ const ListaFamosos = ({ getIdFamosos }) => {
 
     const getNoticias = async () => {
         const data = await FamososServices.getAllFamosos();
-        console.log(data.docs);
         setNoticias(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
     const deleteHandler = async (id) => {
         await FamososServices.deleteFamosos(id);
         getNoticias();
-        window.location.reload(false);
     };
 
     return (
         <>
+            <div>
+                <button onClick={getNoticias}>
+                    Atualizar notícias
+                </button>
+            </div>
             <table>
                 <tr>
                     <th>#</th>
-                    <th>Title</th>
-                    <th>Subtitle</th>
-                    <th>Button Title</th>
-                    <th>Button Url</th>
-                    <th>Image Url</th>
-                    <th>Action</th>
+                    <th>Título</th>
+                    <th>Subtítulo</th>
+                    <th>Título do botão</th>
+                    <th>Url do botão</th>
+                    <th>Url da imagem</th>
+                    <th>Ação</th>
                 </tr>
                 {noticias.map((doc, index) => {
                     return (
                         <tr key={doc.id}>
-                            <td>{index + 1}</td>
+                            <td className="break">{index + 1}</td>
                             <td>{doc.title}</td>
                             <td>{doc.subtitle}</td>
                             <td>{doc.b_title}</td>
-                            <td>{doc.b_url}</td>
-                            <td>{doc.i_url}</td>
+                            <td className="break">{doc.b_url}</td>
+                            <td className="break">{doc.i_url}</td>
                             <td>
                                 <button
                                     variant="secondary"

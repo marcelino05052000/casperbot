@@ -47,7 +47,6 @@ const Esportes = ({ id, setIdEsportes }) => {
     const editHandler = async () => {
         try {
             const docSnap = await EsportesServices.getEsportes(id);
-            console.log("the record is :", docSnap.data());
             set_title(docSnap.data().title);
             set_subtitle(docSnap.data().subtitle);
             set_b_title(docSnap.data().b_title);
@@ -59,7 +58,6 @@ const Esportes = ({ id, setIdEsportes }) => {
     };
 
     useEffect(() => {
-        console.log("ID: ", id);
         if (id !== undefined && id !== "") {
             editHandler();
         }

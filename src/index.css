@@ -11,6 +11,20 @@ td, th {
   border: 1px solid #dddddd;
   text-align: center;
   padding: 8px;
+  overflow-wrap: break-word;
+  margin: 0 !important;
+}
+
+td {
+  width: 14%;
+}
+
+th {
+  height: 30px;
+}
+
+td.break {
+  word-break: break-all;
 }
 
 code {

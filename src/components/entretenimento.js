@@ -41,13 +41,11 @@ const Entretenimento = ({ id, setIdEntretenimento }) => {
         set_b_title("");
         set_b_url("");
         set_i_url("");
-        window.location.reload(false);
     }
 
     const editHandler = async () => {
         try {
             const docSnap = await EntretenimentoServices.getEntretenimento(id);
-            console.log("the record is :", docSnap.data());
             set_title(docSnap.data().title);
             set_subtitle(docSnap.data().subtitle);
             set_b_title(docSnap.data().b_title);
@@ -59,7 +57,6 @@ const Entretenimento = ({ id, setIdEntretenimento }) => {
     };
 
     useEffect(() => {
-        console.log("ID: ", id);
         if (id !== undefined && id !== "") {
             editHandler();
         }
