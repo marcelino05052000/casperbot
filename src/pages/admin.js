@@ -21,7 +21,7 @@ const Admin = () => {
         <div id='login'>
             <h1>Bem vindo. Para prosseguir, por favor coloque a senha de acesso.</h1>
             <div>
-                <input type="text" placeholder="PIN" onChange={(e) => setPin(e.target.value)} />
+                <input type="password" placeholder="PIN" onChange={(e) => setPin(e.target.value)} />
                 <button onClick={acesso}>Entrar</button>
             </div>
         </div>
