@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/casperbot/static/css/main.19c7d8fc.css",
+    "main.js": "/casperbot/static/js/main.422e956b.js",
+    "static/js/787.9b4f968a.chunk.js": "/casperbot/static/js/787.9b4f968a.chunk.js",
+    "index.html": "/casperbot/index.html",
+    "main.19c7d8fc.css.map": "/casperbot/static/css/main.19c7d8fc.css.map",
+    "main.422e956b.js.map": "/casperbot/static/js/main.422e956b.js.map",
+    "787.9b4f968a.chunk.js.map": "/casperbot/static/js/787.9b4f968a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19c7d8fc.css",
+    "static/js/main.422e956b.js"
+  ]
+}
