@@ -21,7 +21,7 @@ const ListaFamosos = ({ getIdFamosos }) => {
     return (
         <>
             <div>
-                <button onClick={getNoticias}>
+                <button onClick={getNoticias} style={{backgroundColor: 'grey', color: 'white'}}>
                     Atualizar notícias
                 </button>
             </div>
@@ -46,15 +46,13 @@ const ListaFamosos = ({ getIdFamosos }) => {
                             <td className="break">{doc.i_url}</td>
                             <td>
                                 <button
-                                    variant="secondary"
-                                    className="editar"
+                                    style={{backgroundColor: 'blue', color: 'white'}}
                                     onClick={(e) => getIdFamosos(doc.id)}
                                 >
                                     Editar
                                 </button>
                                 <button
-                                    variant="danger"
-                                    className="apagar"
+                                    style={{backgroundColor: 'red', color: 'white'}}
                                     onClick={(e) => deleteHandler(doc.id)}
                                 >
                                     Apagar

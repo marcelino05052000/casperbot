@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className='basico'>
       <h1>Casper - Seu bot de notícias</h1>
-      <button onClick={sair}>Sair</button>
+      <button style={{backgroundColor: 'red', color: 'white'}} onClick={sair}>Sair</button>
       <nav>
         <ul>
           <li>

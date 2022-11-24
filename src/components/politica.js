@@ -81,7 +81,7 @@ const Politica = ({ id, setIdPolitica }) => {
             })} />
 
             <div>
-                <button onClick={handleSubmit}>
+                <button onClick={handleSubmit} style={{backgroundColor: 'green', color: 'white'}}>
                     Adicionar / Atualizar
                 </button>
             </div>

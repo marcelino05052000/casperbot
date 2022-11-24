@@ -21,7 +21,7 @@ class EsportesServices {
         return updateDoc(entrDoc, updatedEsportes);
     };
 
-    deteleEsportes = (id) => {
+    deleteEsportes = (id) => {
         const entrDoc = doc(db, "faq.esportes", id);
         return deleteDoc(entrDoc);
     };

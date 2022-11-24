@@ -14,7 +14,7 @@ const NoticiasEsportes = () => {
     return (
         <>
             <header>
-                <h1>Notícias sobre Esportes</h1>
+                <h1 className='basico'>Notícias sobre Esportes</h1>
                 <Link to="/home">retornar a página inicial</Link>
             </header>
 

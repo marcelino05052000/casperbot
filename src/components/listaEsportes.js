@@ -21,7 +21,7 @@ const ListaEsportes = ({ getIdEsportes }) => {
     return (
         <>
             <div>
-                <button onClick={getNoticias}>
+                <button onClick={getNoticias} style={{backgroundColor: 'grey', color: 'white'}}>
                     Atualizar notícias
                 </button>
             </div>
@@ -46,15 +46,13 @@ const ListaEsportes = ({ getIdEsportes }) => {
                             <td className="break">{doc.i_url}</td>
                             <td>
                                 <button
-                                    variant="secondary"
-                                    className="editar"
+                                    style={{backgroundColor: 'blue', color: 'white'}}
                                     onClick={(e) => getIdEsportes(doc.id)}
                                 >
                                     Editar
                                 </button>
                                 <button
-                                    variant="danger"
-                                    className="apagar"
+                                    style={{backgroundColor: 'red', color: 'white'}}
                                     onClick={(e) => deleteHandler(doc.id)}
                                 >
                                     Apagar

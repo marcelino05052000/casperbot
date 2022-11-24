@@ -14,7 +14,7 @@ const NoticiasPolitica = () => {
     return (
         <>
             <header>
-                <h1>Notícias sobre Política</h1>
+                <h1 className='basico'>Notícias sobre Política</h1>
                 <Link to="/home">retornar a página inicial</Link>
             </header>
 

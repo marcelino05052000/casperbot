@@ -81,7 +81,7 @@ const Esportes = ({ id, setIdEsportes }) => {
             })} />
 
             <div>
-                <button onClick={handleSubmit}>
+                <button onClick={handleSubmit} style={{backgroundColor: 'green', color: 'white'}}>
                     Adicionar / Atualizar
                 </button>
             </div>
