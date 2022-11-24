@@ -11,7 +11,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className='basico'>
       <h1>Casper - Seu bot de notícias</h1>
       <button onClick={sair}>Sair</button>
       <nav>

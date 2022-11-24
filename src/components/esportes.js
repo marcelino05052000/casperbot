@@ -41,7 +41,6 @@ const Esportes = ({ id, setIdEsportes }) => {
         set_b_title("");
         set_b_url("");
         set_i_url("");
-        window.location.reload(false);
     }
 
     const editHandler = async () => {
@@ -64,22 +63,22 @@ const Esportes = ({ id, setIdEsportes }) => {
     }, [id]);
 
     return (
-        <div>
-            <input placeholder='Title: ' value={title} onChange={(event => {
+        <div className='basico'>
+            Titulo da notícia:<input placeholder='Título: ' value={title} onChange={(event => {
                 set_title(event.target.value);
             })} /><br />
-            <input placeholder='Subtitle: ' value={subtitle} onChange={(event => {
+            Subtítulo da notícia:<input placeholder='Subtítulo: ' value={subtitle} onChange={(event => {
                 set_subtitle(event.target.value);
             })} /><br />
-            <input placeholder='buttonTittle: ' value={b_title} onChange={(event => {
+            Título do botão:<input placeholder='Título do botão: ' value={b_title} onChange={(event => {
                 set_b_title(event.target.value);
             })} /><br />
-            <input placeholder='buttonUrl: ' value={b_url} onChange={(event => {
+            Url do botão:<input placeholder='Url do botão: ' value={b_url} onChange={(event => {
                 set_b_url(event.target.value);
             })} /><br />
-            <input placeholder='imageUrl: ' value={i_url} onChange={(event => {
+            Url da imagem:<input placeholder='Url da imagem: ' value={i_url} onChange={(event => {
                 set_i_url(event.target.value);
-            })} /><br />
+            })} />
 
             <div>
                 <button onClick={handleSubmit}>
